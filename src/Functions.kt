@@ -1,13 +1,21 @@
-fun main(args: Array<String>) {
+import kotlin.random.Random
 
-    fun BarneyGirlsNumber(Hookers: Int,GoodGirls: Int): Int{
-        return Hookers+GoodGirls
+fun main(args: Array<String>) {
+    val Hookers = Random.nextInt(1,150)
+    val GoodGirls = Random.nextInt(1,150)
+
+    fun BarneyMood(GirlsNumbers: Int){
+        when(GirlsNumbers){
+            in 0..100 -> println("I'm sad because I've slept with only $GirlsNumbers girls")
+            in 101..199 -> println("I'm on my $GirlsNumbers girls. Few more to go")
+            else -> println("I'm awesome")
+        }
     }
-    fun BarneyMood(Mood: String = "Horney"): String{
-        return Mood
-    }
-    val Girls = BarneyGirlsNumber(56,30)
-    println("Barney hooked up with $Girls girls")
-    println("Barney is ${BarneyMood("In love")} with Robin")
+    BarneyMood(BarneyGirlsNumber(Hookers,GoodGirls))
+}
+
+fun BarneyGirlsNumber(Hookers: Int,GoodGirls: Int): Int{
+    println("Barney slept with $Hookers hookers and $GoodGirls good girls")
+    return Hookers+GoodGirls
 }
 
