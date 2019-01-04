@@ -27,7 +27,7 @@ fun main(args: Array<String>) {
 
     val name: String = "Maria"
     val age: Int = 26
-    val profession: String = "Project manager"
+    val profession: String = "Medical Engineer"
 
     println("my name is $name and the length of my name is: ${name.length}\nIm $age years old and my profession is: $profession ")
 
